@@ -1,6 +1,7 @@
 // src/Chatbot.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Chatbot.css'; // Import the CSS file
 
 const Chatbot = () => {
   const [message, setMessage] = useState('');
@@ -29,10 +30,9 @@ const Chatbot = () => {
         <button type="submit">Send</button>
       </form>
       {conversations.map((conv, index) => (
-        <div key={index}>
-          <span><strong>Message:</strong> {conv.message}</span>
-          <br />
-          <span><strong>Response:</strong> {conv.response}</span>
+        <div key={index} className="chat-box">
+          <div className="message"><strong>Message:</strong> {conv.message}</div>
+          <div className="response"><strong>Response:</strong> {conv.response}</div>
         </div>
       ))}
     </div>

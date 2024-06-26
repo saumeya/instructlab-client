@@ -36,12 +36,3 @@ button {
 button:hover {
   background-color: #21a1f1;
 }
-
-div {
-  margin: 10px 0;
-}
-
-span {
-  display: inline-block;
-  margin: 5px 0;
-}
